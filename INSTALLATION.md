@@ -44,3 +44,7 @@ found 0 vulnerabilities
   ➜  Network: use --host to expose
   ➜  press h + enter to show help
 ```
+
+Ejecutar servidor local
+
+- `npm run dev`
