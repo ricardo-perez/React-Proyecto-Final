@@ -1,0 +1,67 @@
+.card {
+    background-color: #202020;
+    border-radius: 12px;
+    overflow: hidden;
+    color: #fff;
+    font-family:
+        system-ui,
+        -apple-system,
+        sans-serif;
+    transition: transform 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.imageContainer {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-grow: 1;
+}
+
+.title {
+    font-size: 1.4rem;
+    margin: 0;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.infoRow {
+    font-size: 0.85rem;
+    color: #aaaaaa;
+}
+
+.stats {
+    margin-top: auto;
+    padding-top: 12px;
+    border-top: 1px solid #333;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.badge {
+    background-color: #ffffff1a;
+    padding: 2px 8px;
+    border-radius: 4px;
+}

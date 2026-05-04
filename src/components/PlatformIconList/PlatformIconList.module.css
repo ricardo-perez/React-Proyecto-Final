@@ -1,0 +1,5 @@
+.platformIconList {
+    display: flex;
+    gap: 12px; /* Esto separa los iconos entre sí */
+    margin: 10px 0;
+}
