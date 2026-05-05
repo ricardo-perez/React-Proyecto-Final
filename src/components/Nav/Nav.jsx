@@ -1,7 +1,14 @@
 export const Nav = () => {
     return (
-        <>
-            <div>NAV</div>
-        </>
+        <nav>
+            <ul>
+                <li>
+                    <Link to={'/'}>Home</Link>
+                </li>
+                <li>
+                    <Link to={'/carrito'}>Carrito</Link>
+                </li>
+            </ul>
+        </nav>
     );
 };
