@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ItemList } from '../ItemList/ItemList';
 export const ItemListContainer = () => {
     const baseUrl = 'https://api.rawg.io/api';
@@ -11,8 +11,8 @@ export const ItemListContainer = () => {
         ordering: '-rating',
     };
     const queryString = new URLSearchParams(params).toString();
-    // const url = `${baseUrl}/games?${queryString}`;
-    const url = 'data/games_2025.json';
+    const urlAPI = `${baseUrl}/games?${queryString}`;
+    const url = '/data/games.json';
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
@@ -49,7 +49,7 @@ export const ItemListContainer = () => {
                 setError(true);
             })
             .finally(() => setLoading(false));
-    }, [url]);
+    }, []);
     if (loading) return <p>Cargando...</p>;
     if (error) return <p>Error al cargar los datos</p>;
     return (

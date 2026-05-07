@@ -2,7 +2,7 @@ import { Nav } from '../Nav/Nav';
 export const Header = () => {
     return (
         <>
-            <div>Header</div>
+            <h1>RAWG API</h1>
             <Nav />
         </>
     );

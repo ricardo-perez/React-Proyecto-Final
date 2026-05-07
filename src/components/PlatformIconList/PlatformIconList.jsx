@@ -22,7 +22,7 @@ export const PlatformIconList = ({ platforms }) => {
         ...new Set(
             platforms.map((platform) => iconMap[platform.platform.slug]),
         ),
-    ].filter(Boolean);
+    ].filter((item) => Boolean(item));
     return (
         <div className={styles.platformIconList}>
             {uniqueIcons.map((Icon, index) => (
