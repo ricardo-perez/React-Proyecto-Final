@@ -122,46 +122,6 @@
     background-color: #aaaaaa;
 }
 
-/* Barra de Ratings */
-.ratingBar {
-    display: flex;
-    height: 10px;
-    border-radius: 5px;
-    overflow: hidden;
-    margin: 15px 0;
-    background: #333;
-}
-
-.exceptional {
-    background-color: #6cce23;
-}
-.recommended {
-    background-color: #4e6aff;
-}
-.meh {
-    background-color: #ffbd3f;
-}
-.skip {
-    background-color: #f03333;
-}
-
-.ratingList {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    font-size: 13px;
-}
-
-.dot {
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    margin-right: 5px;
-}
-
 .platformIcons {
     display: flex;
     flex-wrap: wrap;
