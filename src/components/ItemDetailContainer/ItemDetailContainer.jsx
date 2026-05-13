@@ -7,7 +7,10 @@ export const ItemDetailContainer = () => {
     const [loading, setLoading] = useState(true);
     useEffect(() => {
         fetch('/data/games.json')
-            .then((response) => response.json())
+            .then((response) => {
+                if (!response.ok) throw new Error('Error al cargar los datos');
+                return response.json();
+            })
             .then((data) => {
                 const item = data.find((element) => String(element.id) === id);
                 if (item) setItemDetail(item);

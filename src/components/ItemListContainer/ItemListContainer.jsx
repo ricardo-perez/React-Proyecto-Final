@@ -6,7 +6,10 @@ export const ItemListContainer = () => {
     const [error, setError] = useState(false);
     useEffect(() => {
         fetch('/data/games.json')
-            .then((response) => response.json())
+            .then((response) => {
+                if (!response.ok) throw new Error('Error al cargar los datos');
+                return response.json();
+            })
             .then((data) => setProducts(data))
             .catch((error) => {
                 console.error(error);

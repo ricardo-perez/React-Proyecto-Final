@@ -7,10 +7,10 @@ export const ItemList = ({ products }) => {
     }
     return (
         <section className={styles.gridContainer}>
-            {products.map((product) => (
+            {products.map(({ id, ...product }) => (
                 <Link
-                    to={`/product/${product.id}`}
-                    key={product.id}
+                    to={`/product/${id}`}
+                    key={id}
                     style={{ textDecoration: 'none' }}
                 >
                     <Item {...product} />

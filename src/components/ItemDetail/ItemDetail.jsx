@@ -29,16 +29,14 @@ export const ItemDetail = ({
                             {released || 'TBA'}
                         </span>
                         <div className={styles.platformIcons}>
-                            {platforms.split(', ').map((platform, index) => {
-                                return (
-                                    <span
-                                        key={index}
-                                        className={styles.platformBadge}
-                                    >
-                                        {platform}
-                                    </span>
-                                );
-                            })}
+                            {platforms.split(', ').map((platform, index) => (
+                                <span
+                                    key={index}
+                                    className={styles.platformBadge}
+                                >
+                                    {platform}
+                                </span>
+                            ))}
                         </div>
                     </div>
                     <h1 className={styles.title}>{name}</h1>
