@@ -1,6 +1,5 @@
 import styles from './Item.module.css';
 export const Item = ({
-    id,
     name,
     released,
     background_image,
@@ -19,7 +18,7 @@ export const Item = ({
             </div>
             <div className={styles.content}>
                 <div className={styles.infoRow}>
-                    <span>ID: {id}</span> | <span>{released}</span>
+                    <span>{released}</span>
                 </div>
                 <h2 className={styles.title}>{name}</h2>
                 <div className={styles.infoRow}>

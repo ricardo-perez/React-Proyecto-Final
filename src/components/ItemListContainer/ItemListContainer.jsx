@@ -5,7 +5,7 @@ export const ItemListContainer = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
     useEffect(() => {
-        fetch('/data/games-new.json')
+        fetch('/data/games.json')
             .then((response) => response.json())
             .then((data) => setProducts(data))
             .catch((error) => {

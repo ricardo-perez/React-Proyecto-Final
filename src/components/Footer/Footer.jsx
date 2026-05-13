@@ -12,7 +12,7 @@ export const Footer = () => {
                         className={styles.link}
                     >
                         RAWG.io
-                    </a>
+                    </a> and RAWG++
                 </p>
             </div>
         </footer>

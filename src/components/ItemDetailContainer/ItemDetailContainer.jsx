@@ -6,12 +6,11 @@ export const ItemDetailContainer = () => {
     const [itemDetail, setItemDetail] = useState(null);
     const [loading, setLoading] = useState(true);
     useEffect(() => {
-        fetch('/data/details-of-the-game.json')
+        fetch('/data/games.json')
             .then((response) => response.json())
             .then((data) => {
-                // const item = data.find((element) => String(element.id) === id);
-                // if (item) setItemDetail(item);
-                setItemDetail(data);
+                const item = data.find((element) => String(element.id) === id);
+                if (item) setItemDetail(item);
             })
             .catch((error) => {
                 console.error(error);
@@ -23,7 +22,7 @@ export const ItemDetailContainer = () => {
     return (
         <section>
             <h1>Detalles del producto</h1>
-            <ItemDetail item={itemDetail} />
+            <ItemDetail {...itemDetail} />
         </section>
     );
 };
