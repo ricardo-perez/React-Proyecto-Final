@@ -13,7 +13,7 @@ export const ItemList = ({ products }) => {
                     key={product.id}
                     style={{ textDecoration: 'none' }}
                 >
-                    <Item product={product} />
+                    <Item {...product} />
                 </Link>
             ))}
         </section>

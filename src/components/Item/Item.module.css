@@ -65,3 +65,48 @@
     padding: 2px 8px;
     border-radius: 4px;
 }
+
+.ratingSection {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-top: 10px;
+}
+
+.ratingLabel {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #ccc;
+}
+
+.meter {
+    width: 100%;
+    height: 12px;
+    display: block;
+    /* Estilizado básico para navegadores modernos */
+    appearance: none;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #444; /* Fondo de la barra */
+}
+
+/* Estilos específicos para que se vea más lindo en Webkit (Chrome/Safari/Edge) */
+.meter::-webkit-meter-bar {
+    background: #333;
+    border: none;
+    height: 12px;
+}
+
+.meter::-webkit-meter-optimum-value {
+    background: linear-gradient(to right, #4caf50, #8bc34a);
+    transition: width 0.5s ease-in-out;
+}
+
+.meter::-webkit-meter-suboptimum-value {
+    background: linear-gradient(to right, #ffeb3b, #fdd835);
+}
+
+.meter::-webkit-meter-even-less-good-value {
+    background: linear-gradient(to right, #f44336, #e53935);
+}

@@ -1,35 +1,37 @@
-import { PlatformIconList } from '../PlatformIconList/PlatformIconList';
 import styles from './Item.module.css';
-export const Item = ({ product }) => {
+export const Item = ({
+    id,
+    name,
+    released,
+    background_image,
+    rating,
+    platforms,
+    genres,
+}) => {
     return (
         <article className={styles.card}>
             <div className={styles.imageContainer}>
                 <img
-                    src={product.background_image}
-                    alt={product.name}
+                    src={background_image}
+                    alt={name}
                     className={styles.image}
                 />
             </div>
             <div className={styles.content}>
                 <div className={styles.infoRow}>
-                    <span>ID: {product.id}</span> |{' '}
-                    <span>{product.released}</span>
+                    <span>ID: {id}</span> | <span>{released}</span>
+                </div>
+                <h2 className={styles.title}>{name}</h2>
+                <div className={styles.infoRow}>
+                    <strong>Platforms:</strong>
+                    {platforms}
                 </div>
                 <div className={styles.infoRow}>
-                    <PlatformIconList platforms={product.platforms} />
-                </div>
-                <h2 className={styles.title}>{product.name}</h2>
-                <div className={styles.infoRow}>
-                    <strong>Genres:</strong>{' '}
-                    {product.genres.map((genre) => genre.name).join(', ')}
+                    <strong>Genres:</strong>
+                    {genres}
                 </div>
                 <div className={styles.stats}>
-                    <span className={styles.badge}>
-                        Players: {product.total_interactions.toLocaleString()}
-                    </span>
-                    <span className={styles.badge}>
-                        #{product.top_chart} Top {product.year}
-                    </span>
+                    <span className={styles.badge}>Rating: {rating.toFixed(2)}</span>
                 </div>
             </div>
         </article>
