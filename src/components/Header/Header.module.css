@@ -1,0 +1,57 @@
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: #1a1a1a; /* O el color de fondo de tu app */
+    box-shadow:
+        0 4px 6px -1px rgba(0, 0, 0, 0.3),
+        0 2px 4px -1px rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid #333;
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon {
+    color: #00ce7a; /* Un verde "gamer" o el color que prefieras */
+}
+
+.title {
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -0.5px;
+}
+
+.logoLink {
+    text-decoration: none;
+    color: inherit; /* Mantiene el color blanco que definimos en el título */
+    display: flex;
+    align-items: center;
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer; /* Asegura que el usuario vea la "manito" al pasar el cursor */
+}
+
+/* Opcional: un ligero efecto de hover para que se note que es clicable */
+.logoLink:hover .title {
+    color: #00ce7a; /* Cambia el color del texto al pasar por encima */
+    transition: color 0.2s ease;
+}
+
+.logoLink:hover .icon {
+    transform: scale(1.1); /* Agranda un poquito el joystick al hacer hover */
+    transition: transform 0.2s ease;
+}

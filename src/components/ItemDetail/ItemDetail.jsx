@@ -11,7 +11,6 @@ export const ItemDetail = ({
     genres,
     publishers,
 }) => {
-    console.log('name', name);
     return (
         <div className={styles.detailContainer}>
             <div
