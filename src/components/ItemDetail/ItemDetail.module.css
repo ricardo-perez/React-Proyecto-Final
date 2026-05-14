@@ -139,6 +139,14 @@
     background: rgba(255, 255, 255, 0.05);
 }
 
+.mainPriceDisplay {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #6cce23;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
 @media (max-width: 900px) {
     .mainContent {
         grid-template-columns: 1fr;

@@ -5,11 +5,12 @@ export const ItemDetail = ({
     description,
     released,
     background_image,
-    raiting,
+    rating,
     platforms,
     developers,
     genres,
     publishers,
+    price,
 }) => {
     return (
         <div className={styles.detailContainer}>
@@ -57,7 +58,7 @@ export const ItemDetail = ({
                         <div className={styles.statBox}>
                             <span className={styles.statLabel}>Raiting</span>
                             <span className={styles.metascore}>
-                                {raiting || 'TBA'}
+                                {rating || 'TBA'}
                             </span>
                         </div>
                         <div className={styles.statBox}>
@@ -74,6 +75,9 @@ export const ItemDetail = ({
                         </div>
                     </div>
                     <div className={styles.actionSection}>
+                        <div className={styles.mainPriceDisplay}>
+                            $ {price.toFixed(2)}
+                        </div>
                         <button className={styles.buyButton}>
                             Agregar al Carrito
                         </button>

@@ -65,3 +65,9 @@
     padding: 2px 8px;
     border-radius: 4px;
 }
+
+.priceBadge {
+    color: #6cce23;
+    font-size: 1rem;
+    font-weight: 800;
+}

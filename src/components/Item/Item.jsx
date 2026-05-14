@@ -6,6 +6,7 @@ export const Item = ({
     rating,
     platforms,
     genres,
+    price,
 }) => {
     return (
         <article className={styles.card}>
@@ -30,7 +31,12 @@ export const Item = ({
                     {genres}
                 </div>
                 <div className={styles.stats}>
-                    <span className={styles.badge}>Rating: {rating.toFixed(2)}</span>
+                    <span className={styles.badge}>
+                        Rating: {rating.toFixed(2)}
+                    </span>
+                    <span className={styles.priceBadge}>
+                        $ {price.toFixed(2)}
+                    </span>
                 </div>
             </div>
         </article>
