@@ -3,6 +3,7 @@ import { ItemListContainer } from './components/ItemListContainer/ItemListContai
 import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
 import { Header } from './components/Header/Header';
 import { Footer } from './components/Footer/Footer';
+import { FormContainer } from './components/Form/FormContainer';
 function App() {
     return (
         <>
@@ -14,10 +15,7 @@ function App() {
                         path='/product/:id'
                         element={<ItemDetailContainer />}
                     />
-                    <Route
-                        path='/category/:categoryId'
-                        element={<ItemListContainer />}
-                    />
+                    <Route path='/carrito' element={<h1>Carrito</h1>} />
                 </Routes>
             </main>
             <Footer />
