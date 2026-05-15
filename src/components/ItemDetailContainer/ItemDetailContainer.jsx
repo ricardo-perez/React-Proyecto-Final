@@ -27,7 +27,7 @@ export const ItemDetailContainer = () => {
   if (!itemDetail) return <p>Producto no encontrado</p>;
   return (
     <section>
-      <ItemDetail {...itemDetail} />
+      <ItemDetail item={itemDetail} />
     </section>
   );
 };

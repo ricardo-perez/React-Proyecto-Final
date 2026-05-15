@@ -1,18 +1,60 @@
 .navList {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
 }
 
 .navLink {
-    text-decoration: none;
-    color: #fff;
-    font-weight: 500;
-    transition: color 0.2s ease;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.2s ease;
 }
 
 .navLink:hover {
-    color: #00ce7a; /* El mismo verde del joystick para mantener coherencia */
+  color: #00ce7a;
+}
+
+.navLinkCart {
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s ease;
+}
+
+.navLinkCart:hover {
+  color: #00ce7a;
+}
+
+.cartIconContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.cartSvg {
+  width: 24px;
+  height: 24px;
+}
+
+.cartBadge {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background-color: #ff4d4d;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+  line-height: 1;
+  user-select: none;
 }
