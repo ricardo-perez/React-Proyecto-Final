@@ -1,51 +1,39 @@
-import { validateForm } from '../../utils/validateForm';
-import { FormUI } from './FormUI';
 import { useState } from 'react';
+import { FormUI } from './FormUI';
+import { validateForm } from '../../utils/validateForm';
 
 export const FormContainer = () => {
   const [formData, setFormData] = useState({
-    id: 0,
     name: '',
-    price: 0.99,
-    description: '',
-    released: 2026,
-    background_image: '',
-    rating: 3,
-    platforms: '',
-    developers: '',
-    genres: '',
-    publishers: '',
+    lastname: '',
+    email: '',
+    message: '',
   });
   const [errors, setErrors] = useState({});
+
   const handleChange = (e) => {
-    const { name, value, type } = e.target;
-    const finalValue = type === 'number' ? parseFloat(value) : value;
-    const updatedData = { ...formData, [name]: finalValue };
+    const { name, value } = e.target;
+
+    const updatedData = { ...formData, [name]: value };
     setFormData(updatedData);
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    const errors = validateForm(formData);
-    if (Object.keys(errors).length) {
-      setErrors(errors);
+
+    const error = validateForm(formData);
+
+    if (Object.keys(error).length > 0) {
+      // si hay errores, los guardamos en el estado
+      setErrors(error);
     } else {
+      //si no hay errores, reseteamos el estado "errors" por si previamente sí tuvo errores
       setErrors({});
-      console.log('formData', formData);
-      setFormData({
-        id: 0,
-        name: '',
-        price: 0.99,
-        description: '',
-        released: 2026,
-        background_image: '',
-        rating: 3,
-        platforms: '',
-        developers: '',
-        genres: '',
-        publishers: '',
-      });
+      console.log(formData); //mostramos en consola el objeto formData creado
+      setFormData({ name: '', lastname: '', email: '', message: '' }); // reseteamos el formulario
     }
   };
+
   return (
     <FormUI
       onChange={handleChange}
