@@ -31,7 +31,7 @@ El proyecto debe contar, como mínimo, con la siguiente jerarquía:
 
 - [x] **useState:** Gestión de estados locales (datos, flags, contadores).
 - [x] **useEffect:** Manejo de efectos secundarios, específicamente para la fase de montaje y peticiones asincrónicas.
-- [ ] **Eventos:** Implementación de manejadores de eventos (ej: `onClick`) integrados con la actualización del estado.
+- [x] **Eventos:** Implementación de manejadores de eventos (ej: `onClick`) integrados con la actualización del estado.
 
 ## 5. Consumo de Datos (Peticiones Asincrónicas)
 
