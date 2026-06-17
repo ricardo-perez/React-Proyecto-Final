@@ -1,0 +1,93 @@
+.container {
+  padding: 40px 20px;
+  text-align: left; /* RAWG usa alineación izquierda para sus contenidos principales */
+  background-color: #151515;
+  min-height: calc(
+    100vh - 80px
+  ); /* Ajuste aproximado según la altura del header */
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  color: #fff;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+}
+
+/* Contenedor principal del Layout en 2 columnas */
+.layout {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+/* Columna izquierda (Ancha - Listado de juegos) */
+.mainContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Columna derecha (Angosta - Resumen de pago) */
+.sidebar {
+  width: 350px;
+  position: sticky;
+  top: 20px; /* Se queda fijo al hacer scroll si la lista es muy larga */
+}
+
+/* Estado Vacío */
+.emptyContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  gap: 20px;
+  text-align: center;
+}
+
+.emptyMessage {
+  font-size: 1.2rem;
+  color: #aaaaaa;
+}
+
+/* Botón principal para cuando está vacío */
+.backButton {
+  display: inline-block;
+  background-color: #fff;
+  color: #000;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.backButton:hover {
+  background-color: #e6e6e6;
+  transform: translateY(-2px);
+}
+
+/* Enlace secundario "Continuar comprando" cuando hay items */
+.backLink {
+  display: inline-block;
+  color: #aaaaaa;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  margin-top: 20px;
+}
+
+.backLink:hover {
+  color: #fff;
+}

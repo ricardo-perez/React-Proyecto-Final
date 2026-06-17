@@ -1,0 +1,119 @@
+.summaryCard {
+  background-color: #202020; /* Color de tus tarjetas Item.css */
+  border-radius: 12px;
+  padding: 24px;
+  color: #fff;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  text-align: left;
+}
+
+.summaryTitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 12px;
+}
+
+/* Bloque de datos y totales */
+.infoRows {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  color: #aaaaaa;
+}
+
+.value {
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Fila de total con mayor jerarquía */
+.rowTotal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+  padding-top: 16px;
+  border-top: 1px solid #333;
+}
+
+.labelTotal {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+/* Reutiliza el verde característico de los precios */
+.valueTotal {
+  color: #6cce23;
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+/* Contenedor de acciones */
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Botón principal verde brillante */
+.checkoutButton {
+  background-color: #00ce7a; /* El verde de los hovers del Nav */
+  color: #fff;
+  border: none;
+  padding: 14px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease;
+  width: 100%;
+}
+
+.checkoutButton:hover {
+  background-color: #00b56b;
+}
+
+.checkoutButton:active {
+  transform: scale(0.98);
+}
+
+/* Botón secundario minimalista */
+.clearButton {
+  background: none;
+  border: 1px solid #333;
+  color: #aaaaaa;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+  width: 100%;
+}
+
+.clearButton:hover {
+  color: #ff4d4d;
+  border-color: #ff4d4d33;
+  background-color: #ff4d4d0a;
+}

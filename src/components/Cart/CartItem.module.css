@@ -1,0 +1,69 @@
+.itemCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+}
+
+/* Contenedor de la información del juego */
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: left;
+}
+
+.productLink {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.2s ease;
+}
+
+.productLink:hover {
+  color: #aaaaaa; /* El título se atenúa sutilmente al hacer hover, estilo RAWG */
+}
+
+.productName {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* Contenedor de precio y botón de acción */
+.actionsContainer {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+/* Reutilizamos el criterio del verde de tu precio original */
+.productPrice {
+  color: #6cce23;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+/* Botón eliminar plano, integrado al diseño */
+.deleteButton {
+  background: none;
+  border: none;
+  color: #aaaaaa;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.deleteButton:hover {
+  color: #ff4d4d; /* Cambia al rojo del badge del Nav */
+  background-color: #ff4d4d1a; /* Fondo rojo con mucha opacidad */
+}
