@@ -5,6 +5,7 @@ import { Header } from './components/Header/Header';
 import { Footer } from './components/Footer/Footer';
 import { CreateGameContainer } from './components/CreateGameForm/CreateGameContainer';
 import { FormContainer } from './components/Form/FormContainer';
+import { CartView } from './components/Cart/CartView';
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
           <Route path="/" element={<ItemListContainer />} />
           <Route path="/product/:id" element={<ItemDetailContainer />} />
           <Route path="/contact" element={<FormContainer />} />
-          <Route path="/carrito" element={<h1>Carrito</h1>} />
+          <Route path="/carrito" element={<CartView />} />
         </Routes>
       </main>
       <Footer />
