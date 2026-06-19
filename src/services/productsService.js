@@ -32,3 +32,12 @@ export const getProductById = async (id) => {
     return null;
   }
 };
+export const createProduct = async (productData) => {
+  try {
+    const docRef = await addDoc(productsRef, productData);
+    return docRef.id;
+  } catch (error) {
+    console.error(error);
+    return null;
+  }
+};

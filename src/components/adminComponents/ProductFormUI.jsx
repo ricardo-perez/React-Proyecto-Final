@@ -1,9 +1,20 @@
-import styles from './CreateGameUI.module.css';
-
-export const CreateGameUI = ({ onChange, onSubmit, formData, errors }) => {
+import styles from './ProductFormUI.module.css';
+export const ProductFormUI = ({
+  product,
+  errors,
+  loading,
+  onChange,
+  onFileChange,
+  onSubmit,
+}) => {
   return (
     <div className={styles.formContainer}>
       <h2 className={styles.title}>Nuevo Juego</h2>
+      {errors.general && (
+        <div className={styles.errorBanner}>
+          <p>{errors.general}</p>
+        </div>
+      )}
       <form onSubmit={onSubmit} className={styles.form}>
         <div className={styles.inputGroup}>
           <label className={styles.label} htmlFor="name">
@@ -13,7 +24,7 @@ export const CreateGameUI = ({ onChange, onSubmit, formData, errors }) => {
               type="text"
               id="name"
               name="name"
-              value={formData.name}
+              value={product.name}
               onChange={onChange}
             />
             {errors.name && <p className={styles.errorText}>{errors.name}</p>}
@@ -30,7 +41,7 @@ export const CreateGameUI = ({ onChange, onSubmit, formData, errors }) => {
               min="0.99"
               max="100"
               step="0.01"
-              value={formData.price}
+              value={product.price}
               onChange={onChange}
             />
             {errors.price && <p className={styles.errorText}>{errors.price}</p>}
@@ -39,12 +50,11 @@ export const CreateGameUI = ({ onChange, onSubmit, formData, errors }) => {
         <div className={styles.inputGroup}>
           <label className={styles.label} htmlFor="description">
             <span className={styles.labelText}>Descripción:</span>
-            <input
-              className={styles.input}
-              type="text"
+            <textarea
+              className={styles.textarea}
               id="description"
               name="description"
-              value={formData.description}
+              value={product.description}
               onChange={onChange}
             />
             {errors.description && (
@@ -62,7 +72,7 @@ export const CreateGameUI = ({ onChange, onSubmit, formData, errors }) => {
               name="released"
               min="1970"
               max="2026"
-              value={formData.released}
+              value={product.released}
               onChange={onChange}
             />
             {errors.released && (
@@ -75,12 +85,13 @@ export const CreateGameUI = ({ onChange, onSubmit, formData, errors }) => {
             <span className={styles.labelText}>Imagen de fondo:</span>
             <input
               className={styles.input}
-              type="text"
+              type="file"
               id="background_image"
               name="background_image"
-              value={formData.background_image}
-              onChange={onChange}
+              accept="image/*"
+              onChange={onFileChange}
             />
+            {errors.file && <p className={styles.errorText}>{errors.file}</p>}
             {errors.background_image && (
               <p className={styles.errorText}>{errors.background_image}</p>
             )}
@@ -96,8 +107,8 @@ export const CreateGameUI = ({ onChange, onSubmit, formData, errors }) => {
               name="rating"
               min="1"
               max="5"
-              step="0.1"
-              value={formData.rating}
+              step="0.01"
+              value={product.rating}
               onChange={onChange}
             />
             {errors.rating && (
@@ -108,12 +119,16 @@ export const CreateGameUI = ({ onChange, onSubmit, formData, errors }) => {
         <div className={styles.inputGroup}>
           <label className={styles.label} htmlFor="platforms">
             <span className={styles.labelText}>Plataformas:</span>
+            <span className={styles.helperText}>
+              Ingrese las opciones separadas por coma
+            </span>
             <input
               className={styles.input}
               type="text"
               id="platforms"
               name="platforms"
-              value={formData.platforms}
+              placeholder="PC, PlayStation 5, Xbox Series S/X"
+              value={product.platforms}
               onChange={onChange}
             />
             {errors.platforms && (
@@ -124,12 +139,16 @@ export const CreateGameUI = ({ onChange, onSubmit, formData, errors }) => {
         <div className={styles.inputGroup}>
           <label className={styles.label} htmlFor="developers">
             <span className={styles.labelText}>Desarrolladores:</span>
+            <span className={styles.helperText}>
+              Ingrese las opciones separadas por coma
+            </span>
             <input
               className={styles.input}
               type="text"
               id="developers"
               name="developers"
-              value={formData.developers}
+              placeholder="Sundial Interactive, Sandfall Interactive"
+              value={product.developers}
               onChange={onChange}
             />
             {errors.developers && (
@@ -140,12 +159,16 @@ export const CreateGameUI = ({ onChange, onSubmit, formData, errors }) => {
         <div className={styles.inputGroup}>
           <label className={styles.label} htmlFor="genres">
             <span className={styles.labelText}>Géneros:</span>
+            <span className={styles.helperText}>
+              Ingrese las opciones separadas por coma
+            </span>
             <input
               className={styles.input}
               type="text"
               id="genres"
               name="genres"
-              value={formData.genres}
+              placeholder="Action, Shooter, Adventure, RPG"
+              value={product.genres}
               onChange={onChange}
             />
             {errors.genres && (
@@ -156,12 +179,16 @@ export const CreateGameUI = ({ onChange, onSubmit, formData, errors }) => {
         <div className={styles.inputGroup}>
           <label className={styles.label} htmlFor="publishers">
             <span className={styles.labelText}>Distribuidoras:</span>
+            <span className={styles.helperText}>
+              Ingrese las opciones separadas por coma
+            </span>
             <input
               className={styles.input}
               type="text"
               id="publishers"
               name="publishers"
-              value={formData.publishers}
+              placeholder="Warner Bros. Games, Electronic Arts"
+              value={product.publishers}
               onChange={onChange}
             />
             {errors.publishers && (
@@ -169,7 +196,9 @@ export const CreateGameUI = ({ onChange, onSubmit, formData, errors }) => {
             )}
           </label>
         </div>
-        <button className={styles.submitButton}>Enviar</button>
+        <button className={styles.submitButton} disabled={loading}>
+          {loading ? 'Guardando...' : 'Guardar'}
+        </button>
       </form>
     </div>
   );

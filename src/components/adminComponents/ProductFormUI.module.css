@@ -36,7 +36,8 @@
   color: #00ce7a; /* Color verde para los títulos de los campos */
 }
 
-.input {
+.input,
+.textarea {
   width: 100%;
   padding: 12px;
   background-color: #1e1e1e;
@@ -48,7 +49,8 @@
   transition: all 0.3s ease;
 }
 
-.input:focus {
+.input:focus,
+.textarea:focus {
   outline: none;
   border-color: #00ce7a;
   background-color: #252525;
@@ -65,7 +67,7 @@
   font-size: 0.8rem;
   font-weight: 500;
   text-align: left;
-  margin: -0.4rem 0 0 0; 
+  margin: -0.4rem 0 0 0;
   padding-top: 0.2rem;
   line-height: 1;
   display: block;
@@ -95,4 +97,13 @@
 .input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.helperText {
+  font-size: 0.8rem;
+  color: #777777; /* Gris secundario tenue para diferenciarlo de las etiquetas principales */
+  text-align: left;
+  margin-top: -0.4rem; /* Reduce el espacio vertical con respecto a la etiqueta */
+  margin-bottom: 0.2rem;
+  font-weight: 400;
 }

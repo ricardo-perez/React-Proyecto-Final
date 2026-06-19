@@ -1,0 +1,67 @@
+.successContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  padding: 40px;
+  background-color: #151515; /* El gris oscuro característico de RAWG */
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  max-width: 600px;
+  margin: 40px auto;
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial,
+    sans-serif;
+}
+
+.title {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+
+.text {
+  color: #999999; /* Gris secundario para los textos de soporte */
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 8px 0;
+}
+
+.idHighlight {
+  color: #ffffff;
+  font-family:
+    'Courier New', Courier, monospace; /* Tipografía mono para resaltar el ID técnico */
+  background-color: #202020;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: 1px solid #303030;
+}
+
+.button {
+  margin-top: 32px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000000;
+  background-color: #ffffff; /* Botón blanco pleno contrastando con el fondo oscuro */
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease;
+}
+
+.button:hover {
+  background-color: #e6e6e6; /* Sutil oscurecimiento al pasar el cursor */
+}
+
+.button:active {
+  transform: scale(0.98); /* Efecto de presión sutil */
+}
