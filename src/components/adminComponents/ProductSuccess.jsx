@@ -17,7 +17,7 @@ export const ProductSuccess = () => {
       </p>
       <button
         className={styles.button}
-        onClick={() => navigate('/admin', { replace: true })}
+        onClick={() => navigate('/admin/products/new', { replace: true })}
       >
         Agregar otro producto
       </button>
