@@ -52,7 +52,7 @@ export const ProductFormContainer = () => {
       const id = await createProduct(productData);
       setProduct(emptyProduct);
       setFile(null);
-      navigate(`admin/products/success/${id}`, { replace: true });
+      navigate(`/admin/products/success/${id}`, { replace: true });
     } catch (error) {
       setErrors({ general: error.message });
     } finally {
